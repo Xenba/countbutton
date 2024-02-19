@@ -1,0 +1,13 @@
+#######################################
+# Syntax Coloring Map For easyFingerprint
+#######################################
+
+#######################################
+# countButton   (KEYWORD1)//The name of the variable you want to create and the anti-jamming time for it (e.g. countButton bt(50) )
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+.countBT() KEYWORD2// Count the number of button presses(for example:   bt.countBT(digitalRead(0))
+
+
