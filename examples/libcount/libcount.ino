@@ -1,10 +1,10 @@
 #include "countButton.h"
-countButton bt(50);
+countButton bt(50,0);
 void setup() {
 Serial.begin(115200);
-pinMode(0,INPUT_PULLUP);
+bt.begin();
 }
 
 void loop() {
-bt.countBT(digitalRead(0));
+bt.countBT();
 }

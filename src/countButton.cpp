@@ -1,13 +1,19 @@
 #include "countButton.h"
 
-countButton::countButton(int t){
+countButton::countButton(int t,uint8_t p){
 _btstatus = 0 ;
 _poll = 0;
 _t = t;
 _risingEdge = false;
 _debounceStarted = false;
+p =pin;
 }
-bool countButton::countBT(uint8_t lastbtstate) {
+void countButton::begin(){
+pinMode(pin,INPUT);
+
+}
+bool countButton::countBT() {
+lastbtstate= digitalRead(pin);
   if (lastbtstate != _poll) { // Kiểm tra bất kỳ thay đổi trạng thái nào
     timestart = millis(); // Đặt lại bộ hẹn giờ chỉ khi thay đổi đầu tiên
     _debounceStarted = true;
